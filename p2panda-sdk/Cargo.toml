@@ -1,0 +1,17 @@
+[package]
+name = "p2panda-sdk"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+p2panda-rs.wokspace = true
+cynic = { wokspace = true, features = ["http-reqwest"] }
+reqwest = { wokspace = true, features = ["json"] }
+serde = { workspace = true, features = ["derive"] }
+anyhow.wokspace = true
+
+
+[build-dependencies]
+cynic-codegen.wokspace = true
